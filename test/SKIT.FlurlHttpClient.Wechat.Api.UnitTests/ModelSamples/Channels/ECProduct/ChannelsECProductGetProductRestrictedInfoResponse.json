@@ -1,0 +1,25 @@
+{
+    "errcode": 0,
+    "errmsg": "ok",
+    "data": {
+        "restricted_info_list": [
+            {
+                "product_id": 100000001,
+                "scene_info": [
+                    {
+                        "scene": 3,
+                        "source": 5
+                    },
+                    {
+                        "scene": 4,
+                        "source": 5
+                    },
+                    {
+                        "scene": 8,
+                        "source": 5
+                    }
+                ]
+            }
+        ]
+    }
+}
