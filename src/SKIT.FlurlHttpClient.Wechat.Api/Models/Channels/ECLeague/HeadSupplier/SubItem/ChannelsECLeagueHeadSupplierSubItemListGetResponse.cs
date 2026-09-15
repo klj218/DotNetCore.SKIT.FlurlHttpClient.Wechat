@@ -50,6 +50,13 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
                 [Newtonsoft.Json.JsonProperty("ratio_ext")]
                 [System.Text.Json.Serialization.JsonPropertyName("ratio_ext")]
                 public int RatioExt { get; set; }
+
+                /// <summary>
+                /// 获取或设置推广二维码 URL。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("qr_code_url")]
+                [System.Text.Json.Serialization.JsonPropertyName("qr_code_url")]
+                public string? QrcodeUrl { get; set; }
             }
         }
 

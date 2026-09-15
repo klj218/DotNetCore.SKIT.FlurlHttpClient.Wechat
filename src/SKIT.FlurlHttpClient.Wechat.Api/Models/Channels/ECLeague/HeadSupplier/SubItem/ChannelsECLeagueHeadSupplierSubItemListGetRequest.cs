@@ -26,5 +26,12 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
         [Newtonsoft.Json.JsonProperty("next_key")]
         [System.Text.Json.Serialization.JsonPropertyName("next_key")]
         public string? Cursor { get; set; }
+
+        /// <summary>
+        /// 获取或设置是否返回推广二维码。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("need_qr_code")]
+        [System.Text.Json.Serialization.JsonPropertyName("need_qr_code")]
+        public bool RequireQrcode { get; set; }
     }
 }
