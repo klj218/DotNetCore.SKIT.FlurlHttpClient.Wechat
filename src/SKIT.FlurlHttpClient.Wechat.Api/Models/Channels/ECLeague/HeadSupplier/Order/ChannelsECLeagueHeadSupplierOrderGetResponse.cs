@@ -62,6 +62,13 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
                                 [Newtonsoft.Json.JsonProperty("actual_payment")]
                                 [System.Text.Json.Serialization.JsonPropertyName("actual_payment")]
                                 public int ActualPayAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置商品数量。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("product_cnt")]
+                                [System.Text.Json.Serialization.JsonPropertyName("product_cnt")]
+                                public int ProductCount { get; set; }
                             }
 
                             public class OrderInfo
@@ -441,6 +448,34 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
                                 [Newtonsoft.Json.JsonProperty("promoter_agency_info")]
                                 [System.Text.Json.Serialization.JsonPropertyName("promoter_agency_info")]
                                 public Types.AgencyInfo? PromoterAgencyInfo { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置供货机构信息。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("head_agency_info")]
+                                [System.Text.Json.Serialization.JsonPropertyName("head_agency_info")]
+                                public Types.AgencyInfo? HeadAgencyInfo { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置联盟技术服务费金额（单位：分）。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("platform_amount")]
+                                [System.Text.Json.Serialization.JsonPropertyName("platform_amount")]
+                                public int PlatformAmount { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置联盟技术服务费计算状态。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("platform_commission_status")]
+                                [System.Text.Json.Serialization.JsonPropertyName("platform_commission_status")]
+                                public int PlatformCommissionStatus { get; set; }
+
+                                /// <summary>
+                                /// 获取或设置服务费总额（单位：分）。
+                                /// </summary>
+                                [Newtonsoft.Json.JsonProperty("service_total_amount")]
+                                [System.Text.Json.Serialization.JsonPropertyName("service_total_amount")]
+                                public int ServiceTotalAmount { get; set; }
                             }
 
                             public class BuyerInfo
