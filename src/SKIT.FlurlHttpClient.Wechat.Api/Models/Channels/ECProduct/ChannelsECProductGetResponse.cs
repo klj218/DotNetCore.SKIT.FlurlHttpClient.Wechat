@@ -282,6 +282,20 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
                         [Newtonsoft.Json.JsonProperty("exchange_support")]
                         [System.Text.Json.Serialization.JsonPropertyName("exchange_support")]
                         public int? ExchangeSupport { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置是否支持放心买。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("buy_with_confidence")]
+                        [System.Text.Json.Serialization.JsonPropertyName("buy_with_confidence")]
+                        public int? BuyWithConfidence { get; set; }
+
+                        /// <summary>
+                        /// 获取或设置是否支持先检后发。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("deliver_after_check")]
+                        [System.Text.Json.Serialization.JsonPropertyName("deliver_after_check")]
+                        public int? DeliverAfterCheck { get; set; }
                     }
 
                     public class Aftersale
