@@ -55,5 +55,19 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
         [Newtonsoft.Json.JsonProperty("media_ids")]
         [System.Text.Json.Serialization.JsonPropertyName("media_ids")]
         public IList<string>? CertificateMediaIdList { get; set; }
+
+        /// <summary>
+        /// 获取或设置换货 SKU ID。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("new_sku_id")]
+        [System.Text.Json.Serialization.JsonPropertyName("new_sku_id")]
+        public long? NewSKUId { get; set; }
+
+        /// <summary>
+        /// 获取或设置换货数量。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("product_cnt")]
+        [System.Text.Json.Serialization.JsonPropertyName("product_cnt")]
+        public int? ProductCount { get; set; }
     }
 }

@@ -292,6 +292,52 @@ namespace SKIT.FlurlHttpClient.Wechat.Api
             return await client.SendFlurlRequestAsJsonAsync<Models.ChannelsECAftersaleGetExchangeableSKUListResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// <para>异步调用 [POST] /channels/ec/aftersale/merchantreship 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.weixin.qq.com/doc/store/shop/API/channels-shop-aftersale/aftersale/api_merchantreship.html ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ChannelsECAftersaleMerchantReshipExpressResponse> ExecuteChannelsECAftersaleMerchantReshipExpressAsync(this WechatApiClient client, Models.ChannelsECAftersaleMerchantReshipExpressRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "channels", "ec", "aftersale", "merchantreship")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.ChannelsECAftersaleMerchantReshipExpressResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /channels/ec/aftersale/merchantupdatereshipexpress 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.weixin.qq.com/doc/store/shop/API/channels-shop-aftersale/aftersale/api_merchantupdatereshipexpress.html ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ChannelsECAftersaleMerchantUpdateReshipExpressResponse> ExecuteChannelsECAftersaleMerchantUpdateReshipExpressAsync(this WechatApiClient client, Models.ChannelsECAftersaleMerchantUpdateReshipExpressRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "channels", "ec", "aftersale", "merchantupdatereshipexpress")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.ChannelsECAftersaleMerchantUpdateReshipExpressResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
         #region ECAftersale/Complaint
         /// <summary>
         /// <para>异步调用 [POST] /channels/ec/aftersale/addcomplaintmaterial 接口。</para>
