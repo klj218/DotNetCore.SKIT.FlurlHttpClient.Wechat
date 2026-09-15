@@ -2670,7 +2670,7 @@ namespace SKIT.FlurlHttpClient.Wechat.Api
         }
         #endregion
 
-        #region ECLeague/HeadSupplier/ProductDetail
+        #region ECLeague/HeadSupplier/Product
         /// <summary>
         /// <para>异步调用 [POST] /channels/ec/league/headsupplier/productdetail/get 接口。</para>
         /// <para>
@@ -2692,6 +2692,29 @@ namespace SKIT.FlurlHttpClient.Wechat.Api
                 .SetQueryParam("access_token", request.AccessToken);
 
             return await client.SendFlurlRequestAsJsonAsync<Models.ChannelsECLeagueHeadSupplierProductDetailGetResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// <para>异步调用 [POST] /channels/ec/league/headsupplier/product/getactivity 接口。</para>
+        /// <para>
+        /// REF: <br/>
+        /// <![CDATA[ https://developers.weixin.qq.com/doc/store/leagueheadsupplier/api/shop/api_league_get_product_activity_info.html ]]>
+        /// </para>
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public static async Task<Models.ChannelsECLeagueHeadSupplierProductGetActivityResponse> ExecuteChannelsECLeagueHeadSupplierProductGetActivityAsync(this WechatApiClient client, Models.ChannelsECLeagueHeadSupplierProductGetActivityRequest request, CancellationToken cancellationToken = default)
+        {
+            if (client is null) throw new ArgumentNullException(nameof(client));
+            if (request is null) throw new ArgumentNullException(nameof(request));
+
+            IFlurlRequest flurlReq = client
+                .CreateFlurlRequest(request, HttpMethod.Post, "channels", "ec", "league", "headsupplier", "product", "getactivity")
+                .SetQueryParam("access_token", request.AccessToken);
+
+            return await client.SendFlurlRequestAsJsonAsync<Models.ChannelsECLeagueHeadSupplierProductGetActivityResponse>(flurlReq, data: request, cancellationToken: cancellationToken).ConfigureAwait(false);
         }
         #endregion
 

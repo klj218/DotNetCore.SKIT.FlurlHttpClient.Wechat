@@ -1,0 +1,19 @@
+{
+    "errcode": 0,
+    "errmsg": "ok",
+    "has_activity": false,
+    "product_activity_list": [
+        {
+            "product_id": 0,
+            "sku_id": 0,
+            "activity_price": 999,
+            "platform_subsidy": 100,
+            "platform_subsidy_cnt": 1000,
+            "activity_sub_type": 1,
+            "activity_end_time": 0,
+            "activity_name": "超品日",
+            "stock_mode": 1,
+            "stock_number": 5000
+        }
+    ]
+}
