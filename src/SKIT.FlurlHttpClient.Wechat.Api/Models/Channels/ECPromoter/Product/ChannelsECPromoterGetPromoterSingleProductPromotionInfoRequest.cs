@@ -46,5 +46,12 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
         [Newtonsoft.Json.JsonProperty("product_short_link")]
         [System.Text.Json.Serialization.JsonPropertyName("product_short_link")]
         public string? ProductShortLink { get; set; }
+
+        /// <summary>
+        /// 获取或设置用户自定义关联参数。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("custom_token")]
+        [System.Text.Json.Serialization.JsonPropertyName("custom_token")]
+        public string? CustomToken { get; set; }
     }
 }
