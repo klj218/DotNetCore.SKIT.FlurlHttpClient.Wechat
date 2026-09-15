@@ -156,6 +156,13 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
         public int? SPUSource { get; set; }
 
         /// <summary>
+        /// 获取或设置佣金类型。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("commission_type")]
+        [System.Text.Json.Serialization.JsonPropertyName("commission_type")]
+        public int? CommissionType { get; set; }
+
+        /// <summary>
         /// 获取或设置分页每页数量。
         /// <para>默认值：10</para>
         /// </summary>

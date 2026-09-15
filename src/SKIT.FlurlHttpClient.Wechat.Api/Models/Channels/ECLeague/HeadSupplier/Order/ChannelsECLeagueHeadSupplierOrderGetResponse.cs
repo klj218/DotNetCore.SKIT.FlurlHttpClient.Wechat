@@ -376,6 +376,13 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
                                         [Newtonsoft.Json.JsonProperty("mp_info")]
                                         [System.Text.Json.Serialization.JsonPropertyName("mp_info")]
                                         public Types.MpInfo? MpInfo { get; set; }
+
+                                        /// <summary>
+                                        /// 获取或设置机构自定义关联参数。
+                                        /// </summary>
+                                        [Newtonsoft.Json.JsonProperty("custom_token")]
+                                        [System.Text.Json.Serialization.JsonPropertyName("custom_token")]
+                                        public string? CustomToken { get; set; }
                                     }
                                 }
 
