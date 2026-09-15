@@ -27,6 +27,30 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
                 public string CosUrl { get; set; } = string.Empty;
             }
 
+            public class VoiceMessage
+            {
+                /// <summary>
+                /// 获取或设置语音翻译是否成功。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("translation_succ")]
+                [System.Text.Json.Serialization.JsonPropertyName("translation_succ")]
+                public bool IsTranslationSuccessful { get; set; }
+
+                /// <summary>
+                /// 获取或设置语音翻译后的文本。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("translated_msg")]
+                [System.Text.Json.Serialization.JsonPropertyName("translated_msg")]
+                public string? TranslatedMessage { get; set; }
+
+                /// <summary>
+                /// 获取或设置语音长度（单位：毫秒）。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("play_length")]
+                [System.Text.Json.Serialization.JsonPropertyName("play_length")]
+                public int PlayLength { get; set; }
+            }
+
             public class FileMessage
             {
                 /// <summary>
@@ -55,6 +79,57 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
                 [Newtonsoft.Json.JsonProperty("product_id")]
                 [System.Text.Json.Serialization.JsonPropertyName("product_id")]
                 public string ProductId { get; set; } = string.Empty;
+            }
+
+            public class ReferenceMessage
+            {
+                public static class Types
+                {
+                    public class Reference
+                    {
+                        /// <summary>
+                        /// 获取或设置被引用消息 ID。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("msg_id")]
+                        [System.Text.Json.Serialization.JsonPropertyName("msg_id")]
+                        public string MessageId { get; set; } = string.Empty;
+
+                        /// <summary>
+                        /// 获取或设置被引用消息类型。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("msg_type")]
+                        [System.Text.Json.Serialization.JsonPropertyName("msg_type")]
+                        public string MessageType { get; set; } = string.Empty;
+
+                        /// <summary>
+                        /// 获取或设置被引用消息文本内容。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("content")]
+                        [System.Text.Json.Serialization.JsonPropertyName("content")]
+                        public string Content { get; set; } = string.Empty;
+
+                        /// <summary>
+                        /// 获取或设置被引用消息发送者昵称。
+                        /// </summary>
+                        [Newtonsoft.Json.JsonProperty("from_name")]
+                        [System.Text.Json.Serialization.JsonPropertyName("from_name")]
+                        public string FromName { get; set; } = string.Empty;
+                    }
+                }
+
+                /// <summary>
+                /// 获取或设置文本内容。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("content")]
+                [System.Text.Json.Serialization.JsonPropertyName("content")]
+                public string Content { get; set; } = string.Empty;
+
+                /// <summary>
+                /// 获取或设置引用消息信息。
+                /// </summary>
+                [Newtonsoft.Json.JsonProperty("ref_msg")]
+                [System.Text.Json.Serialization.JsonPropertyName("ref_msg")]
+                public Types.Reference? Reference { get; set; }
             }
         }
 
@@ -94,6 +169,13 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
         public Types.ImageMessage? MessageContentForImage { get; set; }
 
         /// <summary>
+        /// 获取或设置语音消息内容。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("voice")]
+        [System.Text.Json.Serialization.JsonPropertyName("voice")]
+        public Types.VoiceMessage? MessageContentForVoice { get; set; }
+
+        /// <summary>
         /// 获取或设置文件消息内容。
         /// </summary>
         [Newtonsoft.Json.JsonProperty("file")]
@@ -113,5 +195,12 @@ namespace SKIT.FlurlHttpClient.Wechat.Api.Models
         [Newtonsoft.Json.JsonProperty("product_share")]
         [System.Text.Json.Serialization.JsonPropertyName("product_share")]
         public Types.ProductShareMessage? MessageContentForProductShare { get; set; }
+
+        /// <summary>
+        /// 获取或设置引用消息内容。
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty("reference")]
+        [System.Text.Json.Serialization.JsonPropertyName("reference")]
+        public Types.ReferenceMessage? MessageContentForReference { get; set; }
     }
 }
